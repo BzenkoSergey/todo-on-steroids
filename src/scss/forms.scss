@@ -1,0 +1,25 @@
+textarea,
+select,
+input[type="search"],
+input[type="text"] {
+	width: 100%;
+	padding: $field-padding;
+	font-size: $field-font-size;
+	color: $field-color;
+	border: $field-border-size solid $field-border-color;
+	border-radius: $common-border-radius;
+	box-shadow: 0 0 $field-shadow-size $field-shadow-color;
+
+	-webkit-transition: box-shadow .4s ease;
+	transition: box-shadow .4s ease;
+
+	&:focus {
+		outline: none;
+		box-shadow: inset 0 1px $field-focus-shadow-size $field-focus-shadow-color;
+	}
+}
+
+textarea {
+	min-height: 100px;
+	resize: vertical;
+}

@@ -1,0 +1,22 @@
+.btn {
+	padding: $btn-padding;
+	margin: $btn-margin;
+
+	background-color: $btn-bg-color;
+	font-weight: $btn-font-weight;
+	font-size: $btn-font-size;
+	color: $btn-color;
+	text-shadow: 1px 1px $btn-shadow-size $btn-shadow-color;
+	cursor: pointer;
+	border: none;
+	border-radius: $btn-border-radius;
+
+	-webkit-transition: background-color .4s ease;
+	transition: background-color .4s ease;
+
+	&:hover,
+	&:focus {
+		background-color: #232427;
+		box-shadow: none;
+	}
+}

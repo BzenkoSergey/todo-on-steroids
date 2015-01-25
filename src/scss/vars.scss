@@ -1,0 +1,54 @@
+$site-bg-color: #f5f5f5;
+
+$common-font-family: "Open Sans", Tahoma, Arial, sans-serif;
+$common-font-size: 17px;
+$common-text-color: #000;
+$common-link-color: #222;
+$common-border-radius: 3px;
+
+$error-color: #f43c12;
+$section-bg-color: #fff;
+
+$field-font-size: 16px;
+$field-color: #375e75;
+$field-border-size: 1px;
+$field-border-color: #dfdcdc;
+$field-padding: 8px;
+$field-shadow-color: #375e75;
+$field-shadow-size: 1px;
+$field-focus-shadow-color: #a3a2a2;
+$field-focus-shadow-size: $field-shadow-size;
+
+$btn-bg-color: #f43c12;
+$btn-hover-bg-color: #232427;
+$btn-padding: 8px;
+$btn-margin: 0;
+$btn-font-weight: bold;
+$btn-font-size: 17px;
+$btn-color: #fff;
+$btn-border-radius: 2px;
+$btn-shadow-size: 1px;
+$btn-shadow-color: transparentize(#000, .4);
+
+$data-form-sections-offset: 12px;
+$data-form-col-offset: 2%;
+$data-form-border-line-size: 4px;
+$data-form-border-line-color: #f43c12;
+$data-form-border-line-type: solid;
+$data-form-border-type: solid;
+$data-form-border-bottom-size: 2px;
+$data-form-shadow-size: 40px;
+$data-form-shadow-color: #ccc;
+$data-form-border-radius: 5px;
+$data-form-padding: 30px;
+$data-form-btn-reset-bg-color: #a09e9e;
+$data-form-btn-reset-offset: 5px;
+
+$search-form-padding: 10px;
+$search-form-margin: 0 10px;
+$search-form-shadow-color: #ccc;
+$search-form-shadow-size: 1px;
+$search-form-switcher-color: #222;
+$search-form-switcher-padding: 7px 10px;
+$search-form-switcher-min-width: 125px;
+$search-form-height: 60px;

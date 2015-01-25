@@ -1,0 +1,7 @@
+form.hide.search-form(ng-class="{'hide': !visible}", ng-controller='SearchCtrl')
+	a.search-switcher(ng-href='#{{changeVisibleUrl}}')
+		| Click to
+		span(ng-if='!visible') show
+		span(ng-if='visible') hide
+		| Search Panel
+	input(type='search', name='search', ng-model='search', placeholder='Enter for Search')

@@ -1,0 +1,56 @@
+@mixin data-form-grid-col {
+	width: 50% - ($data-form-col-offset / 2);
+	float: left;
+
+	&:first-child {
+		margin-right: $data-form-col-offset;
+	}
+}
+
+.data-form {
+	position: relative;
+	z-index: 3;
+
+	padding: $data-form-padding;
+	background-color: $section-bg-color;
+	border-top: $data-form-border-line-size $data-form-border-line-type $data-form-border-line-color;
+	border-bottom: $data-form-border-bottom-size $data-form-border-type $data-form-shadow-color;
+	border-radius: 0 0 $data-form-border-radius $data-form-border-radius;
+	box-shadow: 0 0 $data-form-shadow-size $data-form-shadow-color;
+
+	&-sections {
+		@include clearfix;
+
+		padding-top: $data-form-sections-offset;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	&-section {
+		@include data-form-grid-col;
+	}
+
+	&-groups {
+		float: right;
+
+		&:first-child {
+			margin-right: 0;
+		}
+
+		.data-form-field-wrap {
+			@include data-form-grid-col;
+		}
+	}
+
+	&-field.error {
+		background-color: $error-color;
+		-webkit-transition: background-color .4s ease;
+		transition: background-color .4s ease;
+	}
+
+	&-btn-reset {
+		background-color: $data-form-btn-reset-bg-color;
+		margin-left: $data-form-btn-reset-offset;
+	}
+}

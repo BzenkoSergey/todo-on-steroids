@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        include ./head.jade
+
+    body
+        .main.initing
+            include ./data-form.jade
+            insclude ./search-form.jade
+            include ./list.jade
+
+        // bower:js
+        // endinject
+
+        script(src='app.js')

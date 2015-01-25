@@ -1,0 +1,30 @@
+form.data-form(ng-controller='FormCtrl', ng-submit='save()')
+	.data-form-sections
+		// Data Key
+		.data-form-section
+			.data-form-field-wrap
+				label.data-form-field-title(for='data-name') Name:
+				input.data-form-field#data-name.data-form-field(type='text', ng-model='key', placeholder='Enter a word', required)
+
+		// Data Value
+		.data-form-section
+			.data-form-field-wrap
+				label.data-form-field-title(for='data-value') Value:
+				input.data-form-field#data-value.data-form-field(type='text', ng-model='value', placeholder='Enter a translate value', required)
+
+	.data-form-sections.data-form-btns
+		// Groups Field
+		.data-form-section.data-form-groups
+			.data-form-field-wrap
+				select.data-form-field(ng-model='group', ng-options='groupObj.name for groupObj in groups', required)
+			.data-form-field-wrap
+				input.data-form-field(type='text', ng-model='createGroup', placeholder='Create Group')
+
+		// Form Buttons
+		.data-form-section
+			.data-form-field-wrap
+				button.btn.data-form-form-btn-submit
+					span(ng-if='editItem') Edit
+					span(ng-if='!editItem') Add a New
+					span.fa.fa-chevron-right.more-link-arrow
+				button.btn.data-form-btn-reset(type='reset', ng-click='reset()') Reset

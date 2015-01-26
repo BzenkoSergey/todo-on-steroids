@@ -1,0 +1,20 @@
+.status {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1px #ccc;
+
+    &-groups-filter {
+        padding: 1px;
+        margin-right: 5px;
+        max-width: 120px;
+        float: right;
+    }
+
+    &-delete-all {
+        float: right;
+    }
+}

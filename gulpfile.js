@@ -2,17 +2,21 @@ var gulp = require('gulp'),
     bowerFiles = require('main-bower-files'),
     inject = require('gulp-inject'),
     sass = require('gulp-sass'),
-    jade = require('gulp-jade'),
     uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css');
 
-gulp.task('default', ['js', 'sass', 'templates', 'watch']);
+gulp.task('default', ['html', 'js', 'sass', 'watch']);
 
 gulp.task('js', function() {
+    var jsDir = "";
     gulp
-        .src('src/js/app.js')
+        .src(['src/*/js/app.js', 'src/*/*/js/app.js'])
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/'));
+        .pipe(rename(function(path) {
+            jsDir = path.dirname;
+        }))
+        .pipe(gulp.dest('./dist/'+ jsDir));
 });
 
 gulp.task('sass', function() {
@@ -23,16 +27,19 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('templates', function() {
+gulp.task('html', function() {
+    var htmlDir = "";
+
     gulp
-        .src('src/templates/index.jade')
-        .pipe(jade())
-        .pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower'}))
-        .pipe(gulp.dest('./dist/'));
+        .src(['src/*.html', 'src/*/*.html', 'src/*/*/*.html'])
+        .pipe(rename(function(path) {
+            htmlDir = path.dirname;
+        }))
+        .pipe(gulp.dest('./dist/' + htmlDir));
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['src/js/*.js', 'src/js/*/*.js'], ['js']);
+    gulp.watch(['src/*/*.js', 'src/*/*/*.js'], ['js']);
     gulp.watch(['src/scss/*.scss', 'src/scss/*/*.scss'], ['sass']);
-    gulp.watch(['src/templates/*.jade', 'src/templates/*/*.jade'], ['templates']);
+    gulp.watch(['src/*.html'], ['html']);
 });

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo on Steroids - Example</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin">
+    </head>
+
+    <body>
+        <div class="main">
+
+            <!-- Form -->
+            <form class="data-form">
+                <div class="data-form-sections">
+                    <div class="data-form-section">
+                        <div class="data-form-field-wrap">
+                            <label for="data-name" class="data-form-field-title">Name:</label>
+                            <input id="data-name" class="data-form-field" type="text" placeholder="Enter a word">
+                        </div>
+                    </div>
+                    <div class="data-form-section">
+                        <div class="data-form-field-wrap">
+                            <label for="data-value" class="data-form-field-title">Value:</label>
+                            <input id="data-value" class="data-form-field" type="text" placeholder="Enter a translate value">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-form-sections data-form-btns">
+                    <!-- Groups Field-->
+                    <div class="data-form-section data-form-groups">
+                        <div class="data-form-field-wrap">
+                            <select class="data-form-field">
+                                <option>Group 1</option>
+                                <option>Group 2</option>
+                                <option>Group 3</option>
+                            </select>
+                        </div>
+                        <div class="data-form-field-wrap">
+                            <input class="data-form-field" type="text" placeholder="Create Group">
+                        </div>
+                    </div>
+
+                    <!-- Form Buttons-->
+                    <div class="data-form-section">
+                        <div class="data-form-field-wrap">
+                            <button class="btn data-form-btn-submit">
+                                Add a New
+                                <span class="fa fa-chevron-right more-link-arrow"></span>
+                            </button>
+                            <button type="reset" ng-click="reset()" class="btn data-form-btn-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Search Panel -->
+            <div class="search">
+                <span class="search-switcher">Click to show Search Panel</span>
+                <input type="search" name="query" placeholder="Enter for Search">
+            </div>
+
+            <!-- Status -->
+            <div class="status">
+                <span class="btn btn-mini status-delete-all">Delete All</span>
+
+                <select class="status-groups-filter">
+                    <option value="">All</option>
+                    <option>Group 1</option>
+                    <option>Group 2</option>
+                    <option>Group 3</option>
+                </select>
+
+                Items found: 4
+            </div>
+
+            <!-- List -->
+            <div class="list">
+                <div class="list-group">
+                    <h2 class="list-group-name">Group 1 (2)</h2>
+                    <article class="list-item">
+                        <div class="list-item-toolbar">
+                            <a href="#" class="btn">edit</a>
+                            <a href="#" class="btn">remove</a>
+                        </div>
+                        <div class="list-item-content">
+                            <span class="list-item-key">Name</span>
+                            <span class="list-item-value">Value</span>
+                        </div>
+                    </article>
+                    <article class="list-item">
+                        <div class="list-item-toolbar">
+                            <a href="#" class="btn">edit</a>
+                            <a href="#" class="btn">remove</a>
+                        </div>
+                        <div class="list-item-content">
+                            <span class="list-item-key">Name</span>
+                            <span class="list-item-value">Value</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="list-group">
+                    <h2 class="list-group-name">Group 2 (2)</h2>
+                    <article class="list-item">
+                        <div class="list-item-toolbar">
+                            <a href="#" class="btn">edit</a>
+                            <a href="#" class="btn">remove</a>
+                        </div>
+                        <div class="list-item-content">
+                            <span class="list-item-key">Name</span>
+                            <span class="list-item-value">Value</span>
+                        </div>
+                    </article>
+                    <article class="list-item">
+                        <div class="list-item-toolbar">
+                            <a href="#" class="btn">edit</a>
+                            <a href="#" class="btn">remove</a>
+                        </div>
+                        <div class="list-item-content">
+                            <span class="list-item-key">Name</span>
+                            <span class="list-item-value">Value</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -26,4 +26,18 @@
 		font-size: 15px;
 		float: right;
 	}
+
+	&-item-toolbar {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		min-width: 200px;
+		padding: .6rem;
+		opacity: 0;
+	}
+
+	&-item:hover &-item-toolbar,
+	&-item:focus &-item-toolbar {
+		opacity: 1;
+	}
 }

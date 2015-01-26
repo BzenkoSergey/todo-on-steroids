@@ -19,4 +19,9 @@
 		background-color: #232427;
 		box-shadow: none;
 	}
+
+	&-mini {
+		padding: $btn-padding - ($btn-padding / 3);
+		font-size: $btn-font-size - ($btn-font-size / 3);
+	}
 }

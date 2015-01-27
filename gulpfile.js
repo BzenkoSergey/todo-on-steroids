@@ -11,7 +11,7 @@ gulp.task('default', ['html', 'js', 'sass', 'watch']);
 gulp.task('js', function() {
     var jsDir = "";
     gulp
-        .src(['src/*/js/app.js', 'src/*/*/js/app.js'])
+        .src(['src/*/app.js'])
         .pipe(uglify())
         .pipe(rename(function(path) {
             jsDir = path.dirname;

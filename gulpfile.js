@@ -23,7 +23,7 @@ gulp.task('sass', function() {
     gulp
         .src('src/scss/styles.scss')
         .pipe(sass())
-        .pipe(minifyCSS({keepBreaks:false}))
+        .pipe(minifyCSS({keepBreaks: false}))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -41,5 +41,5 @@ gulp.task('html', function() {
 gulp.task('watch', function() {
     gulp.watch(['src/*/*.js', 'src/*/*/*.js'], ['js']);
     gulp.watch(['src/scss/*.scss', 'src/scss/*/*.scss'], ['sass']);
-    gulp.watch(['src/*.html'], ['html']);
+    gulp.watch(['src/*.html', 'src/*/*.html'], ['html']);
 });
